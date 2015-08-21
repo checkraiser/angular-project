@@ -1,6 +1,9 @@
-Angular Project with:
+## Angular Project with:
 
 - Gulp
 - Coffee
 - Sass
 - Haml
+
+## Running
+  gulp
