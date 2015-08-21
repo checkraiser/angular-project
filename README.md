@@ -1,9 +1,16 @@
 ## Angular Project with:
 
-- Gulp
-- Coffee
-- Sass
-- Haml
+    - Gulp
+    - Coffee
+    - Sass
+    - Haml
 
-## Running
-  gulp
+## Installation
+
+    npm install
+    sudo gem install serve
+
+## Building and Running
+
+    gulp
+    serve
