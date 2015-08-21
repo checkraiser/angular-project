@@ -9,7 +9,7 @@ var haml = require('gulp-haml');
 
 
 gulp.task('coffee', function () {
-  gulp.src(['src/coffee/**/app.coffee', 'src/coffee/**/*.coffee'])
+  gulp.src(['src/coffee/**/app.coffee', 'src/coffee/**/routes.coffee', 'src/coffee/**/*.coffee'])
     .pipe(sourcemaps.init())
     .pipe(coffee())
       .pipe(concat('app.js'))

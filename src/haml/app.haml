@@ -1,5 +1,5 @@
-!!!
-%html(ng-app="exampleApp")
+!!! 5
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
   %head
     %meta(charset="utf-8")
     %meta#viewport(content="initial-scale=1, user-scalable=no, width=device-width" name="viewport")
@@ -11,13 +11,21 @@
     %link(href="css/vendor/bootstrap.theme.min.css" rel="stylesheet")
     %script(src="js/vendor/jquery.min.js")
     %script(src="js/vendor/jquery-ui.min.js")
+    %script(src="js/vendor/angular-ui-router.min.js")
     %script(src="js/app.js")
     %link(href="css/vendor/jquery-ui.min.css" rel="stylesheet")
 
-  %body(ng-controller="FirstCtrl")
-    .panel.panel-default
-      .panel-heading
-        %h3 Products
-      .panel-body
-        %div(unordered-list="products")
+
+  %body(ng-app="exampleApp")
+    %nav.navbar.navbar-inverse(role="navigation")
+      .navbar-header
+        %a.navbar-brand(ui-sref="#") AngularUI Router
+      %ul.nav.navbar-nav
+        %li
+          %a(ui-sref="home") Home
+        %li
+          %a(ui-sref="about") About
+
+    .container
+      %ui-view
 

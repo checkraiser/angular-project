@@ -1,1 +1,1 @@
-window.exampleApp = angular.module "exampleApp", []
+angular.module "exampleApp", ['ui.router']
