@@ -13,4 +13,16 @@ angular.module("exampleApp").config ["$stateProvider", "$urlRouterProvider", ($s
     .state 'home.paragraph',
       url: '/paragraph'
       template: 'I could sure use a drink right now'
+
+    .state 'about',
+      url: '/about'
+      views:
+        '':
+          templateUrl: 'templates/about.html'
+        'columnOne@about':
+          template: 'Column 1'
+        'columnTwo@about':
+          template: 'Column 2'
+
 ]
+
