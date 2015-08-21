@@ -30,7 +30,7 @@ gulp.task('haml', function(){
   gulp.src('src/haml/app.haml')
     .pipe(haml())
     .pipe(gulp.dest('public'));
-  gulp.src('src/haml/**/*.haml')
+  gulp.src(['!src/haml/app.haml' ,'src/haml/**/*.haml'])
     .pipe(haml())
     .pipe(gulp.dest('public/templates'));
 })
