@@ -1,5 +1,5 @@
 !!!
-%html
+%html(ng-app="exampleApp")
   %head
     %meta(charset="utf-8")
     %meta#viewport(content="initial-scale=1, user-scalable=no, width=device-width" name="viewport")
@@ -12,7 +12,12 @@
     %script(src="js/jquery.min.js")
     %script(src="js/jquery-ui.min.js")
     %script(src="js/app.js")
-    %link(href="js/jquery-ui.min.css" rel="stylesheet")
+    %link(href="css/jquery-ui.min.css" rel="stylesheet")
 
-  %body
+  %body(ng-controller="FirstCtrl")
+    .panel.panel-default
+      .panel-heading
+        %h3 Products
+      .panel-body
+        %div(unordered-list="products")
 

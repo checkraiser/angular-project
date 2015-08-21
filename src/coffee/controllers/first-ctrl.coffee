@@ -7,6 +7,6 @@ ctrl = (
     { name: "Pears", category: "Fruit", price: 2.02, expiry: 6 }
   ]
 
-exampleApp.controller "FirstCtrl", [
+angular.module("exampleApp").controller "FirstCtrl", [
   "$scope", ctrl
 ]

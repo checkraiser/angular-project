@@ -10,12 +10,12 @@ var haml = require('gulp-haml');
 
 gulp.task('coffee', function () {
   gulp.src(['src/coffee/**/app.coffee', 'src/coffee/**/*.coffee'])
-    .pipe(coffee({bare: true}))
     .pipe(sourcemaps.init())
+    .pipe(coffee())
       .pipe(concat('app.js'))
       .pipe(ngAnnotate())
       .pipe(uglify())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./public/js'))
 });
 
