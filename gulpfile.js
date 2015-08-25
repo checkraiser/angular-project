@@ -6,12 +6,13 @@ var ngAnnotate = require('gulp-ng-annotate')
 var sass = require('gulp-sass');
 var coffee = require('gulp-coffee');
 var haml = require('gulp-haml');
-
+var react = require('gulp-react');
 
 gulp.task('coffee', function () {
   gulp.src(['src/coffee/**/app.coffee', 'src/coffee/**/routes.coffee', 'src/coffee/**/*.coffee'])
     .pipe(sourcemaps.init())
     .pipe(coffee())
+      .pipe(react())
       .pipe(concat('app.js'))
       .pipe(ngAnnotate())
       .pipe(uglify())

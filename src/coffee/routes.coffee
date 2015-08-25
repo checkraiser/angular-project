@@ -4,6 +4,7 @@ angular.module("exampleApp").config ["$stateProvider", "$urlRouterProvider", ($s
     .state 'home',
       url: '/home'
       templateUrl: 'templates/home.html'
+      controller: 'FirstCtrl'
 
     .state 'home.list',
       url: '/list'
